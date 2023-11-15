@@ -27,7 +27,7 @@ export const useFetch = (url: string) => {
         setIsLoading(true);
         fetchData();
 
-    }, [])
+    }, [ url ])
 
     return { data, isLoading, error };
 }
