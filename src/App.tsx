@@ -17,6 +17,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import store from './store'
 import { Provider } from 'react-redux'
 import { RTKQueryDemo } from "./RTKQueryDemo";
+import { ProductList } from "./ProductList";
+import { Accordion } from "./Accordion";
 
 
 const router = createBrowserRouter([
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
     {
         path: "/rtkquerydemo",
         element: <RTKQueryDemo />
+    },
+    {
+        path: "/products",
+        element: <ProductList />
+    },
+    {
+        path: "/accordion",
+        element: <Accordion />
     }
 ]);
 
