@@ -19,6 +19,8 @@ import { Provider } from 'react-redux'
 import { RTKQueryDemo } from "./RTKQueryDemo";
 import { ProductList } from "./ProductList";
 import { Accordion } from "./Accordion";
+import { ErrorBoundaryDemo } from "./ErrorBoundaryDemo";
+import { CssVariants } from "./CssVariants";
 
 
 const router = createBrowserRouter([
@@ -65,6 +67,14 @@ const router = createBrowserRouter([
     {
         path: "/accordion",
         element: <Accordion />
+    },
+    {
+        path: "/ErrorBoundaryDemo",
+        element: <ErrorBoundaryDemo />
+    },
+    {
+        path: "/CssVariants",
+        element: <CssVariants />
     }
 ]);
 
