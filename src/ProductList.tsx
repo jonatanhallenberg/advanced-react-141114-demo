@@ -17,7 +17,7 @@ export const ProductList = () => {
     }, [])
 
     return <>
-        {products.map(product => <div data-testid={product.id}>{product.title}</div>)}
+        {products.map(product => <div data-testid={product.id}>Title: {product.title}</div>)}
     </>
 
 }
