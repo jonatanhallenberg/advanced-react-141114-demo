@@ -3,7 +3,7 @@ import { Link } from './Link';
 import '@testing-library/jest-dom';
 
 test('should render link text', () => {
-    render(<Link url="http://www.google.se">click here</Link>)
+    render(<Link url="http://www.google.se">click here123</Link>)
     const linkElement = screen.getByText('click here');
     expect(linkElement).toBeInTheDocument();
 })
