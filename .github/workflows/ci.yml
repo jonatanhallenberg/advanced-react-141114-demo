@@ -1,0 +1,27 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Installera npm-paket
+      run: npm ci
+
+    - name: Köra tester
+      run: npm test
+
+    - name: Kontrollera testresultat
+      run: |
+        if [ ${{ job.status }} != 'success' ]; then
+          echo "Testerna misslyckades, förhindrar merge."
+          exit 1
+        fi
