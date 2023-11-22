@@ -21,6 +21,11 @@ import { ProductList } from "./ProductList";
 import { Accordion } from "./Accordion";
 import { ErrorBoundaryDemo } from "./ErrorBoundaryDemo";
 import { CssVariants } from "./CssVariants";
+import { SidebarPage } from "./SidebarPage";
+import { TodoList } from "./UseMemoDemo";
+import { ParentComponent } from "./UseCallbackDemo";
+import { SuspenseDemo } from "./SuspenseDemo";
+import { FilterTabsDemo } from "./FilterTabsDemo";
 
 
 const router = createBrowserRouter([
@@ -75,6 +80,26 @@ const router = createBrowserRouter([
     {
         path: "/CssVariants",
         element: <CssVariants />
+    },
+    {
+        path: "/sidebarpage",
+        element: <SidebarPage />
+    },
+    {
+        path: "/UseMemoDemo",
+        element: <><TodoList /><TodoList /></>
+    },
+    {
+        path: "/UseCallbackDemo",
+        element: <ParentComponent />
+    },
+    {
+        path: "/SuspenseDemo",
+        element: <SuspenseDemo />
+    },
+    {
+        path: "/FilterTabsDemo",
+        element: <FilterTabsDemo />
     }
 ]);
 
